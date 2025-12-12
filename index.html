@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instrumen Survei Akhir Tahun</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #ffffff;
+        color: #333;
+      }
+      header {
+        text-align: center;
+        padding: 30px 20px;
+        background: #f7faff;
+        border-bottom: 2px solid #e3f0ff;
+      }
+      h1 {
+        margin: 0;
+        color: #1e7bd6;
+        font-size: 1.6rem;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+
+      .kelas {
+        background: #ffffff;
+        border: 1px solid #e1e7f0;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+        min-height: 220px; /* tinggi seragam */
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      .kelas h2 {
+        margin-top: 0;
+        color: #1e7bd6;
+        font-size: 1.3rem;
+      }
+
+      .siswa {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f0f0;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: all 0.4s ease;
+      }
+
+      .siswa:last-child {
+        border-bottom: none;
+      }
+
+      button {
+        padding: 8px 14px;
+        border: none;
+        border-radius: 6px;
+        background: #1e7bd6;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        background: #145a9c;
+      }
+
+      /* Responsive */
+      @media (max-width: 600px) {
+        .siswa {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        button {
+          margin-top: 5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Instrumen Survei Akhir Tahun Penguatan Karakter</h1>
+      <p>Dinas Pendidikan Provinsi DKI Jakarta</p>
+    </header>
+
+    <div class="container">
+      <div class="kelas" onclick="toggleSiswa(this)">
+        <h2>Kelas X - AKL</h2>
+        <div class="siswa">
+          <span>CLARA AURA KASIH</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=CLARA+AURA+KASIH&entry.851575806=69829196&entry.664715575=Perempuan&entry.1823044574=Kristen&entry.1842700653=3091864571&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>SELVI YULIYANTI</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=Selvi+Yuliyanti&entry.851575806=69829196&entry.664715575=Perempuan&entry.1823044574=Islam&entry.1842700653=0091148679&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+      </div>
+
+      <div class="kelas" onclick="toggleSiswa(this)">
+        <h2>Kelas X - TKR</h2>
+        <div class="siswa">
+          <span>AGUNG RIZKY JULIAN</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=AGUNG+RIZKY+JULIAN&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0089469200&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>AKBAR YUDHA WIJANARKO</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=AKBAR+YUDHA+WIJANARKO&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0091967167&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>ANANDA REZKY HERMANSAH</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=ANANDA+REZKY+HERMANSAH&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0093043360&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>BANYU IRAWAN</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=BANYU+IRAWAN&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Kristen&entry.1842700653=0095243405&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>DICKY ACHMAD NURWAN</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=DICKY+ACHMAD+NURWAN&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0093310414&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>FIAN ALVIANSYAH</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=FIAN+ALVIANSYAH&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0092485715&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>MUHAMMAD ALFARIZY</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=MUHAMMAD+ALFARIZY&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0092362759&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>MUHAMMAD BHAKTI SAPUTRA</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=Muhammad+Bhakti+Saputra&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0091988650&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>MUHAMMAD VICKY APRILIO</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=MUHAMMAD+VICKY+APRILIO&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0097343318&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+      </div>
+
+      <div class="kelas" onclick="toggleSiswa(this)">
+        <h2>Kelas X - TKJ</h2>
+        <div class="siswa">
+          <span>BIMA HABIBIE ARTHAYAHSYAH</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=BIMA+HABIBIE+ARTHAYAHSYAH&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0086687276&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>HABIB RIZQI</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=HABIB+RIZQI&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0097611174&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>HAMZA MANAN</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=HAMZA+MANAN&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0098345561&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>KAMILAH RAHMANI SOLIHAH</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=KAMILAH+RAHMANI+SOLIHAH&entry.851575806=69829196&entry.664715575=Perempuan&entry.1823044574=Islam&entry.1842700653=0096370214&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>MUHAMMAD YUSUF</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=MUHAMMAD+YUSUF&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0089101637&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>NUR AZIZAH</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=NUR+AZIZAH&entry.851575806=69829196&entry.664715575=Perempuan&entry.1823044574=Islam&entry.1842700653=3094686232&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+      </div>
+
+      <div class="kelas" onclick="toggleSiswa(this)">
+        <h2>Kelas XI - AKL</h2>
+        <div class="siswa">
+          <span>VIRA RASTI ANGGRAINI</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=VIRA+RASTI+ANGGRAINI&entry.851575806=69829196&entry.664715575=Perempuan&entry.1823044574=Islam&entry.1842700653=3096784827&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+      </div>
+
+      <div class="kelas" onclick="toggleSiswa(this)">
+        <h2>Kelas XI - TKR</h2>
+        <div class="siswa">
+          <span>AFRIZAL LATIF</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=AFRIZAL+LATIF&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=3092560384&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>FACHREZA RAMDHANI</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=FACHREZA+RAMDHANI&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0086611967&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>FADLI JUNAIDI</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=FADLI+JUNAIDI&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0081903102&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>FERDIAN ZAMRI</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=Ferdian+Zamri&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0079881910&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>MUHAMMAD RAFA MAULANA</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=MUHAMMAD+RAFA+MAULANA&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0084000865&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>MUHAMMAD SHODIQ</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=MUHAMMAD+SHODIQ&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0087676423&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+      </div>
+
+      <div class="kelas" onclick="toggleSiswa(this)">
+        <h2>Kelas XI - TKJ</h2>
+        <div class="siswa">
+          <span>ANDHES PRAKOSO</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=ANDHES+PRAKOSO&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0081435480&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>ANGGI FERANIKA PUTRI GEA</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=ANGGI+FERANIKA+PUTRI+GEA&entry.851575806=69829196&entry.664715575=Perempuan&entry.1823044574=Islam&entry.1842700653=0098889099&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>BOUGENVIL NOVI SAZAHRA</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=BOUGENVIL+NOVI+SAZAHRA&entry.851575806=69829196&entry.664715575=Perempuan&entry.1823044574=Islam&entry.1842700653=0081374622&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>JULIANA JOLIE</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=JULIANA+JOLIE&entry.851575806=69829196&entry.664715575=Perempuan&entry.1823044574=Islam&entry.1842700653=0088536136&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+      </div>
+
+      <div class="kelas" onclick="toggleSiswa(this)">
+        <h2>Kelas XII - AKL</h2>
+        <div class="siswa">
+          <span>FITRI AYU WULANDARI</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=FITRI+AYU+WULANDARI&entry.851575806=69829196&entry.664715575=Perempuan&entry.1823044574=Islam&entry.1842700653=0074708211&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>INDAH SUCI LESTARI</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=INDAH+SUCI+LESTARI&entry.851575806=69829196&entry.664715575=Perempuan&entry.1823044574=Islam&entry.1842700653=0085972795&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>KESYA HALIMATUS SA'DIYAH</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=KESYA+HALIMATUS+SA%27DIYAH&entry.851575806=69829196&entry.664715575=Perempuan&entry.1823044574=Islam&entry.1842700653=0088170939&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>REYSE ANAYLA</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=REYSE+ANAYLA&entry.851575806=69829196&entry.664715575=Perempuan&entry.1823044574=Islam&entry.1842700653=0082234171&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+      </div>
+
+      <div class="kelas" onclick="toggleSiswa(this)">
+        <h2>Kelas XII - TKR</h2>
+        <div class="siswa">
+          <span>M. FIRMAN SYAH</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=M.+FIRMAN+SYAH&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0068046431&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>SATRIA ANDIKA PRATAMA</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=SATRIA+ANDIKA+PRATAMA&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0077804413&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+      </div>
+
+      <div class="kelas" onclick="toggleSiswa(this)">
+        <h2>Kelas XII - TKJ</h2>
+        <div class="siswa">
+          <span>ABDUL KALAM SYAMIL BASYARNOV</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=ABDUL+KALAM+SYAMIL+BASYARNOV&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0064820997&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>AMELIA OKTAVIANI</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=AMELIA+OKTAVIANI&entry.851575806=69829196&entry.664715575=Perempuan&entry.1823044574=Katholik&entry.1842700653=0072095692&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>HAIDAR ALI</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=HAIDAR+ALI&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0073607311&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>KENNEDY. S</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=KENNEDY.+S&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=3079859848&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>MARIYA RAMADANI</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=MARIYA+RAMADANI&entry.851575806=69829196&entry.664715575=Perempuan&entry.1823044574=Islam&entry.1842700653=0072676613&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>MUHAMMAD DZAELANI</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=Muhammad+Dzaelani&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=3071012009&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>MUHAMMAD FADLY</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=MUHAMMAD+FADLY&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0072582703&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>RA'UF KHOIRUL HAJJAM</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=RA%27UF+KHOIRUL+HAJJAM&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0077709280&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>SHAFIRA FITRATUL ULYA</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=SHAFIRA+FITRATUL+ULYA&entry.851575806=69829196&entry.664715575=Perempuan&entry.1823044574=Islam&entry.1842700653=0077223029&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+        <div class="siswa">
+          <span>SULTAN</span>
+          <button
+            onclick="goTo('https://docs.google.com/forms/d/e/1FAIpQLSeIF8rTDM10Elmre92HngLxIR9oHvXZdLWgy-EOKy4Oe20YIQ/viewform?entry.91861699=SULTAN&entry.851575806=69829196&entry.664715575=Laki-laki&entry.1823044574=Islam&entry.1842700653=0076076976&entry.1775251487=Kota+Adm.+Jakarta+Timur+-+Prov.+D.K.I.+Jakarta')"
+          >
+            isi survei
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function goTo(url) {
+        window.open(url, "_blank");
+      }
+
+      function toggleSiswa(el) {
+        const items = el.querySelectorAll(".siswa");
+        items.forEach((item) => {
+          if (item.style.maxHeight) {
+            item.style.maxHeight = null;
+            item.style.opacity = 0;
+          } else {
+            item.style.maxHeight = item.scrollHeight + "px";
+            item.style.opacity = 1;
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
